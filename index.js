@@ -1,5 +1,3 @@
-
-const button = document.querySelector('button')
 const form = document.querySelector('form')
 const userInput = document.querySelector('#input')
 const result = document.querySelector('#result')
@@ -21,27 +19,18 @@ const getEightBallAnswer = async (userQuestion) => {
     const res = await fetch(baseURI + userQuestion)
     const data = await res.json()
     
-    displayResult(data)
+    result.textContent = data.magic.answer
     loader.classList.remove('show');
     form.reset()
     }catch(err){
       loader.classList.remove('show');
       return errorMessage('Invalid request')
-      
   }
-}
-
-const displayResult = (data) => {
-  result.textContent = data.magic.answer
 }
 
 const errorMessage = (msg) =>{
   error.innerHTML = msg
 }
-
-button.addEventListener('click', () => {
-  getEightBallAnswer(userInput.value)
-})
 
 form.addEventListener('submit', e => {
   e.preventDefault()
