@@ -1,0 +1,56 @@
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Josefin Sans';
+  color: #000;
+  margin: auto;
+  text-align: center;
+}
+
+h1{
+  font-size: 60px;
+}
+
+p{
+  font-size: 20px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input{
+  width: 600px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+button{
+  color:#585858 ;
+  background-color: #f25f25;
+  padding: 10px;
+  border-radius: 0px;
+  border: 0px;
+  font-family: 'Josefin Sans';
+}
+
+button:hover {
+  background-color: #8eb5e0;
+}
+
+#error{
+  color: #f25f25
+}
+
+.loader{
+  display: none;
+}
+
+.loader.show {
+  display: inline-block;
+}
