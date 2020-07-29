@@ -37,6 +37,7 @@ button{
   border-radius: 0px;
   border: 0px;
   font-family: 'Josefin Sans';
+  width: 150px;
 }
 
 button:hover {
